@@ -1,0 +1,21 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "Bot for Discord",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "keywords": [],
+  "author": "koete",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.6.0",
+    "axios": "^1.3.4",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.36",
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "request": "^2.88.2"
+  }
+}
