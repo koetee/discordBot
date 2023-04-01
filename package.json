@@ -4,7 +4,7 @@
   "description": "Bot for Discord",
   "main": "src/bot.js",
   "scripts": {
-    "test": "node ."
+    "test": "node src/bot.js"
   },
   "keywords": [],
   "author": "koete",
