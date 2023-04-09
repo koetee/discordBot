@@ -1,14 +1,22 @@
-const { SlashCommandBuilder } = require("discord.js");
+const {
+  SlashCommandBuilder,
+  ApplicationCommandOptionType,
+} = require("discord.js");
 
 module.exports = {
-  data: new SlashCommandBuilder().setName("sex").setDescription("sex?"),
+  data: new SlashCommandBuilder()
+    .setName("sex")
+    .setDescription("sex?")
+    .addUserOption((option) =>
+      option
+        .setName("input")
+        .setDescription("The User to sex")
+        .setRequired(true)
+    ),
   async execute(interaction) {
-
- 
+    const target = interaction.options.getUser("input");
     await interaction.reply({
-      content: `${interaction.user} нереально трахнул ${
-        interaction.guild.members.cache.random().user
-      }`,
+      content: `${interaction.user} нереально трахнул ${target}`,
     });
   },
 };

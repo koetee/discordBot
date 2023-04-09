@@ -1,5 +1,12 @@
 require("dotenv").config();
 
+const express = require('express');
+const app = express();
+const port = 3000;
+
+///
+
+
 const { token } = process.env;
 const {
   Client,
@@ -18,6 +25,16 @@ const client = new Client({
   ],
   partials: [Partials.Channel],
 });
+
+
+
+app.get('/', function(request, response) { response.send(`ready:${port}`);});
+app.listen(port, () => console.log());
+
+
+
+
+
 client.commands = new Collection();
 client.buttons = new Collection();
 client.selectMenus = new Collection();
@@ -38,3 +55,4 @@ client.handleComponents();
 client.handleCommands();
 
 client.login(token);
+

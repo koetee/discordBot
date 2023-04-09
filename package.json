@@ -4,7 +4,7 @@
   "description": "Bot for Discord",
   "main": "src/bot.js",
   "scripts": {
-    "test": "node src/bot.js"
+    "start": "node src/bot.js"
   },
   "keywords": [],
   "author": "koete",
@@ -16,6 +16,7 @@
     "discord-api-types": "^0.37.36",
     "discord.js": "^14.8.0",
     "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "request": "^2.88.2"
   }
 }

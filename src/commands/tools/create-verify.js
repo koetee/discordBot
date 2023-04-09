@@ -15,6 +15,7 @@ module.exports = {
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
   async execute(interaction, client) {
+    
     const verify_embed = new EmbedBuilder()
       .setTitle(`Verification`)
       .setDescription(`Click the button to verify your account`)
